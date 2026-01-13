@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membros - NetConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0052CC;
+            --secondary: #7B68EE;
+            --accent: #FF6B9D;
+            --success: #00D4AA;
+            --warning: #FFB020;
+            --bg-dark: #0A0E27;
+            --bg-card: #12172D;
+            --bg-light: #1A1F3A;
+            --bg-lighter: #232947;
+            --text-primary: #FFFFFF;
+            --text-secondary: #94A3B8;
+            --border: #1E293B;
+            --sidebar-width: 280px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--bg-card);
+            border-right: 1px solid var(--border);
+            padding: 24px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .sidebar-logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-logo svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .sidebar-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            flex: 1;
+        }
+
+        .nav-section {
+            margin-bottom: 32px;
+        }
+
+        .nav-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            padding: 0 12px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            margin-bottom: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-item:hover {
+            background: var(--bg-light);
+            color: var(--text-primary);
+        }
+
+        .nav-item.active {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(123, 104, 238, 0.15));
+            color: var(--primary);
+        }
+
+        .nav-item svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+            stroke: currentColor;
+            fill: none;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .user-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .user-company {
+            font-size: 12px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            min-height: 100vh;
+        }
+
+        .topbar {
+            height: 72px;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(20px);
+        }
+
+        .topbar-left h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .topbar-left p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-icon:hover {
+            background: var(--bg-lighter);
+            border-color: var(--primary);
+        }
+
+        .btn-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-secondary);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Content */
+        .content {
+            padding: 32px;
+        }
+
+        /* Search and Filter */
+        .controls-bar {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .search-bar {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 16px 14px 48px;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-secondary);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .filter-chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-chip {
+            padding: 10px 16px;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .filter-chip:hover {
+            background: var(--bg-light);
+            border-color: var(--primary);
+        }
+
+        .filter-chip.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-color: transparent;
+            color: white;
+        }
+
+        /* Stats Summary */
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .stat-mini {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-mini-value {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+
+        .stat-mini-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Category Sections */
+        .category-section {
+            margin-bottom: 40px;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .category-info {
+            flex: 1;
+        }
+
+        .category-title {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .category-count {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Member Cards */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+
+        .member-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .member-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .member-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .member-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .member-avatar {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .member-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .member-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .member-company {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .member-sector-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(0, 102, 255, 0.15);
+            color: var(--primary);
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .member-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .member-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .member-detail svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 2;
+            stroke: currentColor;
+            fill: none;
+        }
+
+        .member-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .btn-small {
+            flex: 1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-small.primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .btn-small.secondary {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .btn-small:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-small svg {
+            width: 14px;
+            height: 14px;
+            stroke-width: 2;
+            stroke: currentColor;
+            fill: none;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .empty-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .empty-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--text-secondary);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .empty-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .empty-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .topbar {
+                padding: 0 20px;
+            }
+
+            .controls-bar {
+                flex-direction: column;
+            }
+
+            .search-bar {
+                min-width: 100%;
+            }
+
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </div>
+            <div class="sidebar-title">NetConnect</div>
+        </div>
+
+        <nav class="nav-menu">
+            <div class="nav-section">
+                <div class="nav-section-title">Principal</div>
+                <a href="/dashboard" class="nav-item">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="/membros" class="nav-item active">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Membros
+                </a>
+                <a href="/referencias" class="nav-item">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    Referências
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Configurações</div>
+                <a href="#" class="nav-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    Comissões
+                </a>
+                <a href="#" class="nav-item">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    Ajuda
+                </a>
+            </div>
+        </nav>
+
+        <div class="user-profile">
+            <div class="user-avatar" id="userAvatar">RM</div>
+            <div class="user-info">
+                <div class="user-name" id="userName">Renato Machado</div>
+                <div class="user-company" id="userCompany">GO Flamboyant</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="topbar-left">
+                <h1>Membros da Rede</h1>
+                <p>Conecte-se com profissionais de diversos setores</p>
+            </div>
+            <div class="topbar-right">
+                <button class="btn-icon" onclick="toggleSidebar()">
+                    <svg viewBox="0 0 24 24">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <button class="btn-icon" onclick="logout()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Stats Summary -->
+            <div class="stats-summary">
+                <div class="stat-mini">
+                    <div class="stat-mini-value" id="totalMembers">50</div>
+                    <div class="stat-mini-label">Total de Membros</div>
+                </div>
+                <div class="stat-mini">
+                    <div class="stat-mini-value" id="totalSectors">0</div>
+                    <div class="stat-mini-label">Setores Diferentes</div>
+                </div>
+                <div class="stat-mini">
+                    <div class="stat-mini-value" id="activeSector">-</div>
+                    <div class="stat-mini-label">Setor Ativo</div>
+                </div>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="controls-bar">
+                <div class="search-bar">
+                    <svg class="search-icon" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Buscar membros por nome, empresa..."
+                        id="searchInput"
+                        oninput="filterMembers()"
+                    >
+                </div>
+                <div class="filter-chips" id="filterChips">
+                    <!-- Filters will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Categories and Members -->
+            <div id="categoriesContainer">
+                <!-- Categories will be loaded here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div class="empty-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <div class="empty-title">Nenhum membro encontrado</div>
+                <div class="empty-text">Tente ajustar sua busca ou filtros</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let allMembers = [];
+        let activeFilter = 'Todos';
+        let searchQuery = '';
+
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadMembers();
+            updateStats();
+        });
+
+        async function loadMembers() {
+            try {
+                const response = await fetch('/api/contacts');
+                allMembers = await response.json();
+                
+                // Get unique sectors
+                const sectors = ['Todos', ...new Set(allMembers.map(m => m.sector))].sort();
+                
+                // Create filter chips
+                const filterChips = document.getElementById('filterChips');
+                filterChips.innerHTML = sectors.map(sector => `
+                    <div class="filter-chip ${sector === 'Todos' ? 'active' : ''}" 
+                         onclick="filterBySector('${sector}')"
+                         data-sector="${sector}">
+                        ${sector}
+                    </div>
+                `).join('');
+                
+                displayMembers();
+            } catch (error) {
+                console.error('Error loading members:', error);
+            }
+        }
+
+        function displayMembers() {
+            // Group members by sector
+            const grouped = {};
+            
+            const filtered = allMembers.filter(member => {
+                const matchesSearch = !searchQuery || 
+                    member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    member.company.toLowerCase().includes(searchQuery.toLowerCase());
+                
+                const matchesSector = activeFilter === 'Todos' || member.sector === activeFilter;
+                
+                return matchesSearch && matchesSector;
+            });
+
+            if (filtered.length === 0) {
+                document.getElementById('categoriesContainer').style.display = 'none';
+                document.getElementById('emptyState').style.display = 'block';
+                return;
+            }
+
+            document.getElementById('categoriesContainer').style.display = 'block';
+            document.getElementById('emptyState').style.display = 'none';
+
+            filtered.forEach(member => {
+                if (!grouped[member.sector]) {
+                    grouped[member.sector] = [];
+                }
+                grouped[member.sector].push(member);
+            });
+
+            const container = document.getElementById('categoriesContainer');
+            container.innerHTML = Object.entries(grouped)
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([sector, members]) => `
+                    <div class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">${getSectorIcon(sector)}</div>
+                            <div class="category-info">
+                                <div class="category-title">${sector}</div>
+                                <div class="category-count">${members.length} ${members.length === 1 ? 'membro' : 'membros'}</div>
+                            </div>
+                        </div>
+                        <div class="members-grid">
+                            ${members.map(member => `
+                                <div class="member-card">
+                                    <div class="member-header">
+                                        <div class="member-avatar">${getInitials(member.name)}</div>
+                                        <div class="member-info">
+                                            <div class="member-name">${member.name}</div>
+                                            <div class="member-company">${member.company}</div>
+                                            <div class="member-sector-badge">${member.sector}</div>
+                                        </div>
+                                    </div>
+                                    <div class="member-details">
+                                        <div class="member-detail">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                            </svg>
+                                            ${member.phone}
+                                        </div>
+                                        <div class="member-detail">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg>
+                                            ${member.email}
+                                        </div>
+                                    </div>
+                                    <div class="member-actions">
+                                        <button class="btn-small primary" onclick='createReference(${JSON.stringify(member)})'>
+                                            <svg viewBox="0 0 24 24">
+                                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                            </svg>
+                                            Referir
+                                        </button>
+                                        <button class="btn-small secondary">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg>
+                                            Contato
+                                        </button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+        }
+
+        function filterBySector(sector) {
+            activeFilter = sector;
+            
+            document.querySelectorAll('.filter-chip').forEach(chip => {
+                chip.classList.remove('active');
+            });
+            
+            document.querySelector(`[data-sector="${sector}"]`).classList.add('active');
+            
+            displayMembers();
+            updateStats();
+        }
+
+        function filterMembers() {
+            searchQuery = document.getElementById('searchInput').value;
+            displayMembers();
+            updateStats();
+        }
+
+        function updateStats() {
+            const filtered = allMembers.filter(member => {
+                const matchesSearch = !searchQuery || 
+                    member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    member.company.toLowerCase().includes(searchQuery.toLowerCase());
+                
+                const matchesSector = activeFilter === 'Todos' || member.sector === activeFilter;
+                
+                return matchesSearch && matchesSector;
+            });
+
+            document.getElementById('totalMembers').textContent = filtered.length;
+            
+            const uniqueSectors = new Set(filtered.map(m => m.sector));
+            document.getElementById('totalSectors').textContent = uniqueSectors.size;
+            
+            document.getElementById('activeSector').textContent = activeFilter;
+        }
+
+        function getInitials(name) {
+            return name.split(' ').map(n => n[0]).join('').substring(0, 2);
+        }
+
+        function getSectorIcon(sector) {
+            const icons = {
+                'Tecnologia': '💻',
+                'Arquitetura': '🏛️',
+                'Marketing': '📱',
+                'Jurídico': '⚖️',
+                'Design': '🎨',
+                'Contabilidade': '📊',
+                'Imobiliário': '🏢',
+                'Engenharia': '🔧',
+                'Saúde': '⚕️',
+                'Seguros': '🛡️',
+                'RH': '👥',
+                'Fotografia': '📸',
+                'Consultoria': '💼',
+                'Gastronomia': '🍽️',
+                'Moda': '👗',
+                'Fitness': '💪',
+                'Serviços Linguísticos': '🌐',
+                'Logística': '🚚',
+                'Indústria': '🏭',
+                'Turismo': '✈️',
+                'Comunicação': '📢',
+                'Pet Care': '🐾',
+                'Floricultura': '🌸',
+                'Energia': '⚡',
+                'Eventos': '🎉',
+                'Beleza': '💄',
+                'Farmácia': '💊',
+                'Educação': '📚',
+                'Construção': '🏗️',
+                'Automotivo': '🚗',
+                'Cultura': '📖',
+                'Segurança': '🔒',
+                'Artesanato': '🎭',
+                'Desenvolvimento': '🚀',
+                'Serviços': '🔨',
+                'Finanças': '💰'
+            };
+            return icons[sector] || '📁';
+        }
+
+        function createReference(member) {
+            alert(`Criar referência para: ${member.name}\nEmpresa: ${member.company}`);
+            // Aqui você pode abrir um modal ou redirecionar para a página de referências
+        }
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('show');
+        }
+
+        function logout() {
+            if (confirm('Deseja realmente sair?')) {
+                window.location.href = '/logout';
+            }
+        }
+    </script>
+</body>
+</html>

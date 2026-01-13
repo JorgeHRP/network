@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Reunião do Grupo",
+    "type": "Presencial",
+    "date": "2026-01-22",
+    "time": "07:00",
+    "location": "Edifício Business Tower - Auditório Principal, Av. da Boavista 1145, 15º andar, Sala C1509, Porto",
+    "description": "Networking matinal com café da manhã"
+  },
+  {
+    "id": 2,
+    "title": "Workshop de Negócios",
+    "type": "Híbrido",
+    "date": "2026-01-29",
+    "time": "18:30",
+    "location": "Centro de Convenções Porto - Sala VIP, Rua do Ouro 234, Porto",
+    "description": "Estratégias de crescimento empresarial"
+  },
+  {
+    "id": 3,
+    "title": "Reunião do Grupo",
+    "type": "Presencial",
+    "date": "2026-02-05",
+    "time": "07:00",
+    "location": "Edifício Business Tower - Auditório Principal, Av. da Boavista 1145, 15º andar, Sala C1509, Porto",
+    "description": "Networking matinal com café da manhã"
+  },
+  {
+    "id": 4,
+    "title": "Evento de Networking Premium",
+    "type": "Presencial",
+    "date": "2026-02-14",
+    "time": "19:00",
+    "location": "Hotel Intercontinental - Salão Nobre, Praça da Liberdade 567, Porto",
+    "description": "Jantar de networking com empresários de alto nível"
+  }
+]

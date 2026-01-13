@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name": "Ana Silva Santos",
+    "company": "TechVision Consultoria",
+    "sector": "Tecnologia",
+    "phone": "+351 912 345 001",
+    "email": "ana.silva@techvision.pt"
+  },
+  {
+    "id": 2,
+    "name": "Bruno Costa Ferreira",
+    "company": "Arquitetura Moderna Lda",
+    "sector": "Arquitetura",
+    "phone": "+351 912 345 002",
+    "email": "bruno.costa@arquitetura.pt"
+  },
+  {
+    "id": 3,
+    "name": "Carla Mendes Oliveira",
+    "company": "Marketing Digital Pro",
+    "sector": "Marketing",
+    "phone": "+351 912 345 003",
+    "email": "carla.mendes@marketingpro.pt"
+  },
+  {
+    "id": 4,
+    "name": "Daniel Rodrigues Lima",
+    "company": "Advocacia & Direito",
+    "sector": "Jurídico",
+    "phone": "+351 912 345 004",
+    "email": "daniel.rodrigues@advocacia.pt"
+  },
+  {
+    "id": 5,
+    "name": "Elena Martins Sousa",
+    "company": "Design Studio Elite",
+    "sector": "Design",
+    "phone": "+351 912 345 005",
+    "email": "elena.martins@designstudio.pt"
+  },
+  {
+    "id": 6,
+    "name": "Fernando Alves Pereira",
+    "company": "Contabilidade Fiscal",
+    "sector": "Contabilidade",
+    "phone": "+351 912 345 006",
+    "email": "fernando.alves@contabilidade.pt"
+  },
+  {
+    "id": 7,
+    "name": "Gabriela Santos Costa",
+    "company": "Imobiliária Premium",
+    "sector": "Imobiliário",
+    "phone": "+351 912 345 007",
+    "email": "gabriela.santos@imobiliaria.pt"
+  },
+  {
+    "id": 8,
+    "name": "Henrique Dias Ribeiro",
+    "company": "Engenharia Civil Construtora",
+    "sector": "Engenharia",
+    "phone": "+351 912 345 008",
+    "email": "henrique.dias@engenharia.pt"
+  },
+  {
+    "id": 9,
+    "name": "Isabela Fernandes Lopes",
+    "company": "Saúde & Bem-Estar Clínica",
+    "sector": "Saúde",
+    "phone": "+351 912 345 009",
+    "email": "isabela.fernandes@clinica.pt"
+  },
+  {
+    "id": 10,
+    "name": "João Pedro Carvalho",
+    "company": "Seguros & Proteção",
+    "sector": "Seguros",
+    "phone": "+351 912 345 010",
+    "email": "joao.carvalho@seguros.pt"
+  },
+  {
+    "id": 11,
+    "name": "Kátia Almeida Rocha",
+    "company": "Recursos Humanos Plus",
+    "sector": "RH",
+    "phone": "+351 912 345 011",
+    "email": "katia.almeida@rhplus.pt"
+  },
+  {
+    "id": 12,
+    "name": "Leonardo Gomes Teixeira",
+    "company": "Desenvolvimento Web",
+    "sector": "Tecnologia",
+    "phone": "+351 912 345 012",
+    "email": "leonardo.gomes@devweb.pt"
+  },
+  {
+    "id": 13,
+    "name": "Mariana Cunha Barbosa",
+    "company": "Fotografia Profissional",
+    "sector": "Fotografia",
+    "phone": "+351 912 345 013",
+    "email": "mariana.cunha@foto.pt"
+  },
+  {
+    "id": 14,
+    "name": "Nuno Baptista Moreira",
+    "company": "Consultoria Empresarial",
+    "sector": "Consultoria",
+    "phone": "+351 912 345 014",
+    "email": "nuno.baptista@consultoria.pt"
+  },
+  {
+    "id": 15,
+    "name": "Olívia Pinto Correia",
+    "company": "Psicologia Clínica",
+    "sector": "Saúde",
+    "phone": "+351 912 345 015",
+    "email": "olivia.pinto@psicologia.pt"
+  },
+  {
+    "id": 16,
+    "name": "Paulo Sérgio Monteiro",
+    "company": "Restaurante Gourmet",
+    "sector": "Gastronomia",
+    "phone": "+351 912 345 016",
+    "email": "paulo.monteiro@restaurante.pt"
+  },
+  {
+    "id": 17,
+    "name": "Quésia Ramos Azevedo",
+    "company": "Moda & Estilo Boutique",
+    "sector": "Moda",
+    "phone": "+351 912 345 017",
+    "email": "quesia.ramos@boutique.pt"
+  },
+  {
+    "id": 18,
+    "name": "Rafael Tavares Miranda",
+    "company": "Academia Fitness",
+    "sector": "Fitness",
+    "phone": "+351 912 345 018",
+    "email": "rafael.tavares@academia.pt"
+  },
+  {
+    "id": 19,
+    "name": "Sofia Vieira Nunes",
+    "company": "Tradução & Interpretação",
+    "sector": "Serviços Linguísticos",
+    "phone": "+351 912 345 019",
+    "email": "sofia.vieira@traducao.pt"
+  },
+  {
+    "id": 20,
+    "name": "Tiago Duarte Cardoso",
+    "company": "Logística & Transportes",
+    "sector": "Logística",
+    "phone": "+351 912 345 020",
+    "email": "tiago.duarte@logistica.pt"
+  },
+  {
+    "id": 21,
+    "name": "Úrsula Campos Pires",
+    "company": "Decoração de Interiores",
+    "sector": "Design",
+    "phone": "+351 912 345 021",
+    "email": "ursula.campos@decoracao.pt"
+  },
+  {
+    "id": 22,
+    "name": "Vitor Manuel Araújo",
+    "company": "Serralharia Artística",
+    "sector": "Indústria",
+    "phone": "+351 912 345 022",
+    "email": "vitor.araujo@serralharia.pt"
+  },
+  {
+    "id": 23,
+    "name": "Wanda Freitas Castro",
+    "company": "Agência de Viagens",
+    "sector": "Turismo",
+    "phone": "+351 912 345 023",
+    "email": "wanda.freitas@viagens.pt"
+  },
+  {
+    "id": 24,
+    "name": "Xavier Antunes Moura",
+    "company": "Gráfica Digital",
+    "sector": "Comunicação",
+    "phone": "+351 912 345 024",
+    "email": "xavier.antunes@grafica.pt"
+  },
+  {
+    "id": 25,
+    "name": "Yara Machado Fonseca",
+    "company": "Pet Shop Premium",
+    "sector": "Pet Care",
+    "phone": "+351 912 345 025",
+    "email": "yara.machado@petshop.pt"
+  },
+  {
+    "id": 26,
+    "name": "Zélia Coelho Simões",
+    "company": "Floricultura & Jardinagem",
+    "sector": "Floricultura",
+    "phone": "+351 912 345 026",
+    "email": "zelia.coelho@flores.pt"
+  },
+  {
+    "id": 27,
+    "name": "André Figueiredo Barros",
+    "company": "Energia Solar Renovável",
+    "sector": "Energia",
+    "phone": "+351 912 345 027",
+    "email": "andre.figueiredo@solar.pt"
+  },
+  {
+    "id": 28,
+    "name": "Beatriz Lourenço Reis",
+    "company": "Organização de Eventos",
+    "sector": "Eventos",
+    "phone": "+351 912 345 028",
+    "email": "beatriz.lourenco@eventos.pt"
+  },
+  {
+    "id": 29,
+    "name": "César Pinheiro Marques",
+    "company": "Metalurgia & Soldagem",
+    "sector": "Indústria",
+    "phone": "+351 912 345 029",
+    "email": "cesar.pinheiro@metalurgia.pt"
+  },
+  {
+    "id": 30,
+    "name": "Daniela Soares Cruz",
+    "company": "Estética & Beleza",
+    "sector": "Beleza",
+    "phone": "+351 912 345 030",
+    "email": "daniela.soares@estetica.pt"
+  },
+  {
+    "id": 31,
+    "name": "Eduardo Vaz Guimarães",
+    "company": "Farmácia Central",
+    "sector": "Farmácia",
+    "phone": "+351 912 345 031",
+    "email": "eduardo.vaz@farmacia.pt"
+  },
+  {
+    "id": 32,
+    "name": "Fernanda Matos Braga",
+    "company": "Escola de Idiomas",
+    "sector": "Educação",
+    "phone": "+351 912 345 032",
+    "email": "fernanda.matos@idiomas.pt"
+  },
+  {
+    "id": 33,
+    "name": "Gustavo Amaral Paiva",
+    "company": "Vidraçaria Moderna",
+    "sector": "Construção",
+    "phone": "+351 912 345 033",
+    "email": "gustavo.amaral@vidracaria.pt"
+  },
+  {
+    "id": 34,
+    "name": "Helena Nogueira Faria",
+    "company": "Advocacia Trabalhista",
+    "sector": "Jurídico",
+    "phone": "+351 912 345 034",
+    "email": "helena.nogueira@trabalhista.pt"
+  },
+  {
+    "id": 35,
+    "name": "Igor Batista Pacheco",
+    "company": "Mecânica Automotiva",
+    "sector": "Automotivo",
+    "phone": "+351 912 345 035",
+    "email": "igor.batista@mecanica.pt"
+  },
+  {
+    "id": 36,
+    "name": "Júlia Campos Prado",
+    "company": "Livraria Cultural",
+    "sector": "Cultura",
+    "phone": "+351 912 345 036",
+    "email": "julia.campos@livraria.pt"
+  },
+  {
+    "id": 37,
+    "name": "Kevin Torres Melo",
+    "company": "Segurança Eletrônica",
+    "sector": "Segurança",
+    "phone": "+351 912 345 037",
+    "email": "kevin.torres@seguranca.pt"
+  },
+  {
+    "id": 38,
+    "name": "Larissa Neves Brito",
+    "company": "Nutrição Funcional",
+    "sector": "Saúde",
+    "phone": "+351 912 345 038",
+    "email": "larissa.neves@nutricao.pt"
+  },
+  {
+    "id": 39,
+    "name": "Marcelo Xavier Lima",
+    "company": "Pintura Residencial",
+    "sector": "Construção",
+    "phone": "+351 912 345 039",
+    "email": "marcelo.xavier@pintura.pt"
+  },
+  {
+    "id": 40,
+    "name": "Natália Borges Silva",
+    "company": "Clínica Odontológica",
+    "sector": "Saúde",
+    "phone": "+351 912 345 040",
+    "email": "natalia.borges@odonto.pt"
+  },
+  {
+    "id": 41,
+    "name": "Orlando Farias Siqueira",
+    "company": "Carpintaria Artesanal",
+    "sector": "Artesanato",
+    "phone": "+351 912 345 041",
+    "email": "orlando.farias@carpintaria.pt"
+  },
+  {
+    "id": 42,
+    "name": "Patrícia Ribeiro Maia",
+    "company": "Assessoria Jurídica",
+    "sector": "Jurídico",
+    "phone": "+351 912 345 042",
+    "email": "patricia.ribeiro@assessoria.pt"
+  },
+  {
+    "id": 43,
+    "name": "Quintino Leal Torres",
+    "company": "Refrigeração Industrial",
+    "sector": "Indústria",
+    "phone": "+351 912 345 043",
+    "email": "quintino.leal@refrigeracao.pt"
+  },
+  {
+    "id": 44,
+    "name": "Renata Moura Santos",
+    "company": "Coach Executivo",
+    "sector": "Desenvolvimento",
+    "phone": "+351 912 345 044",
+    "email": "renata.moura@coach.pt"
+  },
+  {
+    "id": 45,
+    "name": "Samuel Pereira Gomes",
+    "company": "Eletricista Profissional",
+    "sector": "Serviços",
+    "phone": "+351 912 345 045",
+    "email": "samuel.pereira@eletricista.pt"
+  },
+  {
+    "id": 46,
+    "name": "Tamires Cardoso Alves",
+    "company": "Cerimonial & Protocolo",
+    "sector": "Eventos",
+    "phone": "+351 912 345 046",
+    "email": "tamires.cardoso@cerimonial.pt"
+  },
+  {
+    "id": 47,
+    "name": "Ulisses Freire Costa",
+    "company": "Dedetização & Controle",
+    "sector": "Serviços",
+    "phone": "+351 912 345 047",
+    "email": "ulisses.freire@dedetizacao.pt"
+  },
+  {
+    "id": 48,
+    "name": "Valéria Teixeira Dias",
+    "company": "Lavanderia Premium",
+    "sector": "Serviços",
+    "phone": "+351 912 345 048",
+    "email": "valeria.teixeira@lavanderia.pt"
+  },
+  {
+    "id": 49,
+    "name": "Wagner Silva Sousa",
+    "company": "Barbearia Premium",
+    "sector": "Beleza",
+    "phone": "+351 912 345 049",
+    "email": "wagner.silva@barbearia.pt"
+  },
+  {
+    "id": 50,
+    "name": "Yasmin Oliveira Ramos",
+    "company": "Consultoria Financeira",
+    "sector": "Finanças",
+    "phone": "+351 912 345 050",
+    "email": "yasmin.oliveira@financeira.pt"
+  }
+]

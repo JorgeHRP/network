@@ -1,0 +1,111 @@
+{
+  "user": {
+    "name": "Jorge Henrique",
+    "email": "jorge@email.com",
+    "company": "Marques",
+    "sector": "Consultoria",
+    "memberSince": "2025-08-01",
+    "renewalDate": "2026-09-01"
+  },
+  "stats": {
+    "givenReferences": 50,
+    "receivedReferences": 1,
+    "receivedBusinessValue": 51300,
+    "opnfGivers": 9474,
+    "invitedMembers": 2,
+    "uegs": 79,
+    "oneToOnes": 28
+  },
+  "givenReferences": [
+    {
+      "id": 1,
+      "date": "2026-01-10",
+      "contactName": "Ana Silva Santos",
+      "contactCompany": "TechVision Consultoria",
+      "referredTo": "Bruno Costa Ferreira",
+      "referredToCompany": "Arquitetura Moderna Lda",
+      "type": "Externa",
+      "status": "Concluída",
+      "estimatedValue": 15000,
+      "commission": 750,
+      "commissionPaid": true
+    },
+    {
+      "id": 2,
+      "date": "2026-01-08",
+      "contactName": "Carla Mendes Oliveira",
+      "contactCompany": "Marketing Digital Pro",
+      "referredTo": "Daniel Rodrigues Lima",
+      "referredToCompany": "Advocacia & Direito",
+      "type": "Interna",
+      "status": "Em andamento",
+      "estimatedValue": 8000,
+      "commission": 400,
+      "commissionPaid": false
+    },
+    {
+      "id": 3,
+      "date": "2026-01-05",
+      "contactName": "Elena Martins Sousa",
+      "contactCompany": "Design Studio Elite",
+      "referredTo": "Fernando Alves Pereira",
+      "referredToCompany": "Contabilidade Fiscal",
+      "type": "Externa",
+      "status": "Concluída",
+      "estimatedValue": 12000,
+      "commission": 600,
+      "commissionPaid": true
+    },
+    {
+      "id": 4,
+      "date": "2025-12-28",
+      "contactName": "Gabriela Santos Costa",
+      "contactCompany": "Imobiliária Premium",
+      "referredTo": "Henrique Dias Ribeiro",
+      "referredToCompany": "Engenharia Civil Construtora",
+      "type": "Externa",
+      "status": "Concluída",
+      "estimatedValue": 25000,
+      "commission": 1250,
+      "commissionPaid": true
+    },
+    {
+      "id": 5,
+      "date": "2025-12-20",
+      "contactName": "Isabela Fernandes Lopes",
+      "contactCompany": "Saúde & Bem-Estar Clínica",
+      "referredTo": "João Pedro Carvalho",
+      "referredToCompany": "Seguros & Proteção",
+      "type": "Interna",
+      "status": "Pendente",
+      "estimatedValue": 5000,
+      "commission": 250,
+      "commissionPaid": false
+    }
+  ],
+  "receivedReferences": [
+    {
+      "id": 1,
+      "date": "2026-01-12",
+      "from": "Kátia Almeida Rocha",
+      "fromCompany": "Recursos Humanos Plus",
+      "clientName": "Leonardo Gomes Teixeira",
+      "clientCompany": "Desenvolvimento Web",
+      "type": "Externa",
+      "status": "Concluída",
+      "value": 51300
+    }
+  ],
+  "chartData": {
+    "months": ["Ago", "Set", "Out", "Nov", "Dez", "Jan"],
+    "cumulative": [6, 12, 22, 35, 43, 50]
+  },
+  "commissionSummary": {
+    "totalEarned": 15750,
+    "totalPending": 2900,
+    "totalPaid": 12850,
+    "averageCommission": 630,
+    "highestCommission": 1250,
+    "commissionsThisMonth": 2100
+  }
+}

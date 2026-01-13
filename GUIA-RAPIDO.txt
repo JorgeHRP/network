@@ -1,0 +1,103 @@
+# 🚀 GUIA RÁPIDO - COMO RODAR O NETCONNECT
+
+## ⚡ Instalação em 5 Minutos
+
+### 1️⃣ Instalar Python
+- Baixe em: https://www.python.org/downloads/
+- Execute o instalador
+- ⚠️ MARQUE "Add Python to PATH" (IMPORTANTE!)
+- Clique em "Install Now"
+- Reinicie o computador
+
+### 2️⃣ Abrir CMD na pasta
+- Coloque todos os arquivos em uma pasta (ex: C:\netconnect)
+- Abra a pasta
+- Clique na barra de endereço
+- Digite: cmd
+- Pressione Enter
+
+### 3️⃣ Instalar dependências
+No CMD, digite:
+```
+pip install -r requirements.txt
+```
+Aguarde instalar (pode demorar 1-2 minutos)
+
+### 4️⃣ Rodar o sistema
+No CMD, digite:
+```
+python app.py
+```
+
+### 5️⃣ Abrir no navegador
+Acesse: http://localhost:5000
+
+---
+
+## 🔐 LOGIN
+
+**Email:** renato@email.com  
+**Senha:** 123456
+
+---
+
+## ✅ Pronto!
+
+Você verá:
+- ✅ Tela de login moderna (dark mode)
+- ✅ Dashboard com estatísticas
+- ✅ Gráfico de referências
+- ✅ 50 contatos para networking
+- ✅ Sistema de comissão 5%
+- ✅ Agenda de eventos
+
+---
+
+## ❌ Problemas?
+
+**"python não é reconhecido"**
+→ Você não instalou o Python OU não marcou "Add to PATH"
+→ Reinstale marcando a opção
+
+**"pip não é reconhecido"**
+→ Mesmo problema acima
+→ Reinstale o Python
+
+**Erro ao instalar Flask**
+→ Feche o CMD, abra como ADMINISTRADOR e tente novamente
+
+**Porta 5000 em uso**
+→ Abra app.py
+→ Na última linha mude 5000 para 5001 ou outra porta
+
+---
+
+## 📂 Arquivos Necessários
+
+Certifique-se que tem TODOS estes arquivos:
+
+```
+netconnect/
+├── app.py
+├── requirements.txt
+├── README.md
+├── templates/
+│   ├── login.html
+│   └── dashboard.html
+└── data/
+    ├── contacts.json
+    ├── events.json
+    └── user-data.json
+```
+
+---
+
+## 💡 Dicas
+
+- O servidor precisa ficar RODANDO no CMD
+- Para parar: Pressione Ctrl+C no CMD
+- Para rodar de novo: Digite python app.py
+
+---
+
+**Qualquer dúvida, me chame! 😊**
