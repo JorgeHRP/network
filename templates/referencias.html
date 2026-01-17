@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Referências - NetConnect</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -45,7 +46,7 @@
             height: 100vh;
             background: var(--bg-card);
             border-right: 1px solid var(--border);
-            padding: 24px;
+            padding: 16px;
             z-index: 100;
             display: flex;
             flex-direction: column;
@@ -55,35 +56,27 @@
         .sidebar-header {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
-            margin-bottom: 48px;
+            margin-bottom: 32px;
         }
 
         .sidebar-logo {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 12px;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
 
-        .sidebar-logo svg {
-            width: 20px;
-            height: 20px;
-            stroke: white;
-            stroke-width: 2;
-            fill: none;
+        .sidebar-logo img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
         }
 
         .sidebar-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            display: none;
         }
 
         .nav-menu {
@@ -649,14 +642,8 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
-                <svg viewBox="0 0 24 24">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
+                <img src="/static/image/logo.png" alt="Logo">
             </div>
-            <div class="sidebar-title">NetConnect</div>
         </div>
 
         <nav class="nav-menu">
@@ -708,9 +695,9 @@
         </nav>
 
         <div class="user-profile">
-            <div class="user-avatar">JH</div>
+            <div class="user-avatar">KB</div>
             <div class="user-info">
-                <div class="user-name">Jorge Henrique</div>
+                <div class="user-name">Kezio Bertori</div>
                 <div class="user-company">Marques</div>
             </div>
         </div>

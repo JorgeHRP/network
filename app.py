@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'netconnect_secret_key_2026'
 
 # Configurações
-MOCK_EMAIL = 'Jorge@email.com'
+MOCK_EMAIL = 'keziobertori@outlook.com'
 MOCK_PASSWORD = '123456'
 
 # Carregar dados JSON
@@ -106,4 +106,4 @@ def create_reference():
     })
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
